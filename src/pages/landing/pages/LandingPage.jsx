@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import { Avatar, Button } from "antd";
 import ILSection1 from "../../../assets/illustration/illustration-1.png";
 import BGSection1 from "../../../assets/images/landing-section-image.png";
 import BGKantinKaryawan from "../../../assets/images/kantin-karyawan.png";
@@ -7,6 +7,11 @@ import ICONFiturClipboard from "../../../assets/icons/fitur-clipboard.png";
 import ICONFiturPromo from "../../../assets/icons/fitur-promo.png";
 import ICONFiturNote from "../../../assets/icons/fitur-note.png";
 import ICONFiturSpoonAndFork from "../../../assets/icons/fitur-fork-spoon.png";
+import ICONWhatsapColor from "../../../assets/icons/whatsapp-color.png";
+import ICONInstagramColor from "../../../assets/icons/instagram-color.png";
+import ICONPhoneColor from "../../../assets/icons/phone-color.png";
+import ILPersonExample from "../../../assets/illustration/person-example.jpeg";
+import { UserOutlined } from "@ant-design/icons";
 
 const fiturSection = [
 	{
@@ -28,6 +33,21 @@ const fiturSection = [
 		title: "Pengambilan Makanan",
 		icon: ICONFiturSpoonAndFork,
 		description: "Proses pengambilan makanan yang efisien",
+	},
+];
+const solusiSection = [
+	{
+		icon: ICONWhatsapColor,
+		description: "WhatsApps",
+	},
+	{
+		icon: ICONInstagramColor,
+		description: "Instagram",
+	},
+	{
+		title: "Pemesanan Online",
+		icon: ICONPhoneColor,
+		description: "Telephone",
 	},
 ];
 
@@ -106,7 +126,7 @@ const LandingPage = () => {
 					</h1>
 				</div>
 			</div>
-			<div className="container mx-auto grid grid-cols-12 bg-section-purple-light mb-20">
+			<div className="container mx-auto grid grid-cols-12 bg-section-purple-light mb-20 p-5">
 				{fiturSection.map((v, i) => {
 					return (
 						<div
@@ -129,6 +149,64 @@ const LandingPage = () => {
 						</div>
 					);
 				})}
+			</div>
+			<div className="bg-foodlink-a-4 min-h-[600px] flex flex-col items-center w-full h-full mb-20 p-10">
+				<h1 className="font-poppins max-w-[700px] text-center text-3xl font-bold">
+					Dipercaya oleh berbagai Instansi dan Institusi di Seluruh Indonesia
+				</h1>
+				<div className="rounded-lg p-10 md:w-[1000px] min-h-[200px] w-[300px] bg-foodlink-a-2 mt-32 ">
+					<div className="flex justify-center h-20">
+						<Avatar
+							size="large"
+							src={ILPersonExample}
+							icon={<UserOutlined />}
+							className="relative top-[-120px] w-32 h-32 md:w-44 md:h-44"
+						/>
+					</div>
+					<p className="font-poppins text-lg md:text-2xl italic font-medium text-center">
+						{'"'}Dengan platform ini, manajemen kantin kami menjadi lebih
+						teratur. Manajemen stok efisien mencegah kekurangan persediaan,
+						fitur promo memberikan fleksibilitas pemasaran, dan pemesanan online
+						memudahkan karyawan. Pengambilan makanan yang lancar meningkatkan
+						efisiensi istirahat. Layanan langganan memberikan nilai tambah bagi
+						bisnis kami. Terima kasih atas inovasi yang memajukan bisnis kantin
+						kami! {'"'}
+					</p>
+					<h6>
+						<p className="font-poppins text-2xl italic font-medium text-center mt-20">
+							Jessica
+						</p>
+					</h6>
+				</div>
+			</div>
+			<div className="container mx-auto grid grid-cols-12 bg-section-purple-light mb-20 min-h-[600px] ">
+				<div className="col-span-12 flex flex-col w-full min-h-[250px] justify-center items-center">
+					<div className="flex flex-col justify-center items-center gap-5">
+						<h2 className="text-xl md:text-3xl text-center font-bold font-poppins">
+							Solusi Sempurna Untuk Administrasi Kantin Anda!
+						</h2>
+						<h3 className="text-sm md:text-lg font-extralight text-center font-poppins">
+							Hubungi layanan dibawah ini agar kami dapat memberikan penawaran
+							terbaik dari website kami
+						</h3>
+						<div className="grid grid-cols-12 h-full w-full gap-3 p-2">
+							{solusiSection.map((v, i) => {
+								return (
+									<div
+										key={i}
+										className="col-span-12 md:col-span-4 bg-foodlink-a-2 rounded-lg flex flex-col justify-center items-center w-full h-[120px]"
+									>
+										<img src={v.icon} alt="icon" width={66} height={80} />
+										<h6 className="text-sm font-semibold mt-1">
+											{v.description}
+										</h6>
+									</div>
+								);
+							})}
+						</div>
+					</div>
+					<div />
+				</div>
 			</div>
 		</LayoutWrapper>
 	);

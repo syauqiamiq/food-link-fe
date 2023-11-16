@@ -1,17 +1,17 @@
+import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Button } from "antd";
-import ILSection1 from "../../../assets/illustration/illustration-1.png";
-import BGSection1 from "../../../assets/images/landing-section-image.png";
-import BGKantinKaryawan from "../../../assets/images/kantin-karyawan.png";
-import LayoutWrapper from "../../../components/layout/LayoutWrapper";
 import ICONFiturClipboard from "../../../assets/icons/fitur-clipboard.png";
-import ICONFiturPromo from "../../../assets/icons/fitur-promo.png";
-import ICONFiturNote from "../../../assets/icons/fitur-note.png";
 import ICONFiturSpoonAndFork from "../../../assets/icons/fitur-fork-spoon.png";
-import ICONWhatsapColor from "../../../assets/icons/whatsapp-color.png";
+import ICONFiturNote from "../../../assets/icons/fitur-note.png";
+import ICONFiturPromo from "../../../assets/icons/fitur-promo.png";
 import ICONInstagramColor from "../../../assets/icons/instagram-color.png";
 import ICONPhoneColor from "../../../assets/icons/phone-color.png";
+import ICONWhatsapColor from "../../../assets/icons/whatsapp-color.png";
+import ILSection1 from "../../../assets/illustration/illustration-1.png";
 import ILPersonExample from "../../../assets/illustration/person-example.jpeg";
-import { UserOutlined } from "@ant-design/icons";
+import BGKantinKaryawan from "../../../assets/images/kantin-karyawan.png";
+import BGSection1 from "../../../assets/images/landing-section-image.png";
+import LayoutWrapper from "../../../components/layout/LayoutWrapper";
 
 const fiturSection = [
 	{

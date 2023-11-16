@@ -4,8 +4,11 @@ import FacebookIcon from "../../assets/icons/facebook.png";
 import InstagramIcon from "../../assets/icons/instagram.png";
 import YoutubeIcon from "../../assets/icons/youtube.png";
 import { Button, Divider } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+	const navigate = useNavigate();
+
 	return (
 		<>
 			<div className="hidden sm:block border-t border-gray-300 bg-foodlink-a-2 border-solid">
@@ -18,6 +21,7 @@ const Footer = () => {
 								className="w-[200px]"
 							/>
 							<Button
+								onClick={() => navigate("/auth/login")}
 								type="default"
 								size="large"
 								className="bg-foodlink-a-1 w-40  text-white text-sm font-semibold font-poppins"

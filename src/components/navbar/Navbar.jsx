@@ -1,5 +1,5 @@
 import { Button, Layout } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import FoodLinkLogo from "../../assets/logo/foodlink-logo.png";
 const { Header } = Layout;
 
@@ -26,6 +26,7 @@ const navbarMenu = [
 	},
 ];
 const Navbar = () => {
+	const navigate = useNavigate();
 	return (
 		<Header className="bg-foodlink-a-2 justify-between hidden md:flex">
 			<div className="container mx-auto  flex justify-between">
@@ -43,6 +44,7 @@ const Navbar = () => {
 				</div>
 				<div className="flex gap-2 p-2 justify-center items-center">
 					<Button
+						onClick={() => navigate("/auth/login")}
 						type="default"
 						shape="round"
 						className="bg-foodlink-a-1 w-24  text-white text-sm font-semibold font-poppins"

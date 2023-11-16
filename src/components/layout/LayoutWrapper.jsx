@@ -7,7 +7,7 @@ const LayoutWrapper = ({ children }) => {
 	return (
 		<Layout>
 			<Navbar />
-			<Content>{children}</Content>
+			<Content className="bg-white">{children}</Content>
 			<Footer />
 		</Layout>
 	);

@@ -1,8 +1,8 @@
-import FoodLinkLogo from "../../../public/assets/logo/foodlink-logo.png";
-import TwitterIcon from "../../../public/assets/icons/twitter.png";
-import FacebookIcon from "../../../public/assets/icons/facebook.png";
-import InstagramIcon from "../../../public/assets/icons/instagram.png";
-import YoutubeIcon from "../../../public/assets/icons/youtube.png";
+import FoodLinkLogo from "../../assets/logo/foodlink-logo.png";
+import TwitterIcon from "../../assets/icons/twitter.png";
+import FacebookIcon from "../../assets/icons/facebook.png";
+import InstagramIcon from "../../assets/icons/instagram.png";
+import YoutubeIcon from "../../assets/icons/youtube.png";
 import { Button, Divider } from "antd";
 
 const Footer = () => {

@@ -1,6 +1,6 @@
 import { Button, Layout } from "antd";
 import { Link } from "react-router-dom";
-import FoodLinkLogo from "../../../public/assets/logo/foodlink-logo.png";
+import FoodLinkLogo from "../../assets/logo/foodlink-logo.png";
 const { Header } = Layout;
 
 const navbarMenu = [

@@ -40,7 +40,7 @@ const ProductCard = ({ data }) => {
 					</Typography>
 				</div>
 				<div className="grid grid-cols-2 gap-2">
-					<div className="col-span-2 md:col-span-1">
+					<div className="col-span-2 md:col-span-2">
 						<Button
 							type="default"
 							shape="round"

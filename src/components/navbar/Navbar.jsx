@@ -52,6 +52,7 @@ const Navbar = () => {
 						Masuk
 					</Button>
 					<Button
+						onClick={() => navigate("/auth/register")}
 						type="default"
 						shape="round"
 						className="bg-white text-foodlink-a-1 w-24  text-sm font-semibold font-poppins"

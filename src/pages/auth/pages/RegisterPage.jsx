@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { FormInputPassword } from "../../../components/input/hook-form/FormInputPassword";
 import { useNavigate } from "react-router-dom";
+import { NumberInput } from "../../../components/input/hook-form/NumberInput";
 
 const defaultValues = {
 	email: "",
@@ -14,18 +15,18 @@ const defaultValues = {
 };
 
 const formSchema = yup.object().shape({
-	email: yup
-		.string()
-		.email()
-
-		.required("Email is required"),
+	full_name: yup.string().required("Full Name is required"),
+	email: yup.string().email().required("Email is required"),
 	password: yup
 		.string()
 		.required("Password is required")
 		.min(4, "Password is too short - must be at least 4 chars."),
+	address: yup.string().required("Address is required"),
+	contact_number: yup.string().required("Contact Number is required"),
+	company_id: yup.number().required("Company is required"),
 });
 
-const LoginPage = () => {
+const RegisterPage = () => {
 	const navigate = useNavigate();
 	const methods = useForm({
 		mode: "onChange",
@@ -40,21 +41,27 @@ const LoginPage = () => {
 
 	return (
 		<div
-			className="bg-cover bg-center bg-no-repeat h-screen w-full flex flex-col items-center"
+			className="bg-cover bg-center bg-no-repeat h-full w-full flex flex-col items-center"
 			style={{
 				backgroundImage: `url(${BGSection1})`,
 			}}
 		>
-			<div className="w-full md:max-w-[600px] mt-32 bg-foodlink-a-2 rounded-lg p-5 flex flex-col items-center">
-				<h1 className="font-bold text-lg font-poppins">Masuk</h1>
+			<div className="w-full md:max-w-[600px] bg-foodlink-a-2 my-28 rounded-lg p-5 flex flex-col items-center">
+				<h1 className="font-bold text-lg font-poppins">Daftar Akun</h1>
 				<h2 className="font-normal text-sm font-poppins">
-					Lihat makanan yang tersedia pada kantin anda!
+					Daftarkan diri anda dan nikmati fitur kami!
 				</h2>
 				<div className="w-96">
 					<Divider className="bg-foodlink-a-4" />
 					<FormProvider {...methods}>
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<div className="flex flex-col gap-4">
+								<FormInput
+									placeHolder="Full Name"
+									required
+									name="full_name"
+									label="Full Name"
+								/>
 								<FormInput
 									placeHolder="Email"
 									required
@@ -66,6 +73,24 @@ const LoginPage = () => {
 									required
 									name="password"
 									label="Password"
+								/>
+								<FormInput
+									placeHolder="Address"
+									required
+									name="address"
+									label="Address"
+								/>
+								<FormInput
+									placeHolder="Contact Number"
+									required
+									name="contact_number"
+									label="Contact Number"
+								/>
+								<NumberInput
+									placeHolder="Company ID"
+									required
+									name="company_id"
+									label="Company ID"
 								/>
 							</div>
 
@@ -84,12 +109,12 @@ const LoginPage = () => {
 							</Button>
 							<div className="flex justify-center mt-5">
 								<Typography className=" font-poppins text-base ">
-									Belum mempunyai akun?{" "}
+									Sudah mempunyai akun?{" "}
 									<span
-										onClick={() => navigate("/auth/register")}
+										onClick={() => navigate("/auth/login")}
 										className="font-poppins font-bold cursor-pointer text-black hover:text-blue-300"
 									>
-										Daftar
+										Masuk
 									</span>
 								</Typography>
 							</div>
@@ -109,4 +134,4 @@ const LoginPage = () => {
 	);
 };
 
-export default LoginPage;
+export default RegisterPage;

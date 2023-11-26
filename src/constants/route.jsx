@@ -5,6 +5,8 @@ import RegisterPage from "../pages/auth/pages/RegisterPage";
 import DashboardPage from "../pages/dashboard/pages/DashboardPage";
 import ListStandPage from "../pages/dashboard/pages/ListStandPage";
 import ListProductPage from "../pages/dashboard/pages/ListProductPage";
+import HistoryPage from "../pages/dashboard/pages/HistoryPage";
+import DetailHistoryTransactionPage from "../pages/dashboard/pages/DetailHistoryTransactionPage";
 
 const router = createBrowserRouter([
 	{
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
 	{
 		path: "/dashboard/canteen/:id/stand/:standId/product",
 		element: <ListProductPage />,
+	},
+	{
+		path: "/dashboard/transaction-history",
+		element: <HistoryPage />,
+	},
+	{
+		path: "/dashboard/transaction-history/:id/detail",
+		element: <DetailHistoryTransactionPage />,
 	},
 ]);
 

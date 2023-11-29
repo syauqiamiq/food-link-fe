@@ -7,6 +7,9 @@ import ListStandPage from "../pages/dashboard/pages/ListStandPage";
 import ListProductPage from "../pages/dashboard/pages/ListProductPage";
 import HistoryPage from "../pages/dashboard/pages/HistoryPage";
 import DetailHistoryTransactionPage from "../pages/dashboard/pages/DetailHistoryTransactionPage";
+import ACDashboardPage from "../pages/admin-company/dashboard/pages/ACDashboardPage";
+import ACCanteenPage from "../pages/admin-company/canteen/pages/ACCanteenPage";
+import ACUserPage from "../pages/admin-company/user/pages/ACUserPage";
 
 const router = createBrowserRouter([
 	{
@@ -40,6 +43,18 @@ const router = createBrowserRouter([
 	{
 		path: "/dashboard/transaction-history/:id/detail",
 		element: <DetailHistoryTransactionPage />,
+	},
+	{
+		path: "/admin-company/dashboard",
+		element: <ACDashboardPage />,
+	},
+	{
+		path: "/admin-company/canteen",
+		element: <ACCanteenPage />,
+	},
+	{
+		path: "/admin-company/user",
+		element: <ACUserPage />,
 	},
 ]);
 

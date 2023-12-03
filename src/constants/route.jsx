@@ -10,8 +10,10 @@ import DetailHistoryTransactionPage from "../pages/dashboard/pages/DetailHistory
 import ACDashboardPage from "../pages/admin-company/dashboard/pages/ACDashboardPage";
 import ACCanteenPage from "../pages/admin-company/canteen/pages/ACCanteenPage";
 import ACUserPage from "../pages/admin-company/user/pages/ACUserPage";
+import VerifyPage from "../pages/auth/pages/VerifyPage";
+import ACStandPage from "../pages/admin-company/stand/pages/ACStandPage";
 
-const router = createBrowserRouter([
+export const pageRoute = [
 	{
 		path: "/",
 		element: <LandingPage />,
@@ -56,6 +58,13 @@ const router = createBrowserRouter([
 		path: "/admin-company/user",
 		element: <ACUserPage />,
 	},
-]);
-
-export default router;
+	{
+		path: "/auth/verify/:token",
+		element: <VerifyPage />,
+	},
+	{
+		path: "/admin-company/canteen/:canteenId/stand",
+		element: <ACStandPage />,
+	},
+];
+export const router = createBrowserRouter(pageRoute);

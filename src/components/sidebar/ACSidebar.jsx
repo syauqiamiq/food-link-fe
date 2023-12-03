@@ -1,19 +1,29 @@
 import { ConfigProvider, Layout, Menu } from "antd";
+import { useLocation, useNavigate } from "react-router-dom";
 import FoodLinkLogo from "../../assets/logo/foodlink-logo.png";
-import menuItems from "../../constants/menu-items";
-import { useNavigate } from "react-router-dom";
+import { menuItems } from "../../constants/menu-items";
+
 const { Sider } = Layout;
 
 const ACSidebar = ({ collapsed }) => {
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	const handleMenuClick = ({ key }) => {
 		const { url } = menuItems.find((v) => v.key === key) || {};
-		console.log(url);
 		if (url) {
 			navigate(url);
 		}
 	};
+
+	const handleSelectedKeys = () => {
+		const splittedPath = location.pathname.split("/");
+		const { key } =
+			menuItems.find((v) => v.url === location.pathname) ||
+			menuItems.find((v) => v.url === `/${splittedPath[1]}/${splittedPath[2]}`);
+		return key;
+	};
+
 	return (
 		<Sider
 			trigger={null}
@@ -40,7 +50,7 @@ const ACSidebar = ({ collapsed }) => {
 			>
 				<Menu
 					className="!bg-foodlink-a-5"
-					defaultSelectedKeys={["ac-dashboard"]}
+					defaultSelectedKeys={handleSelectedKeys}
 					items={menuItems.map((v) => ({
 						key: v.key,
 						icon: v.icon,

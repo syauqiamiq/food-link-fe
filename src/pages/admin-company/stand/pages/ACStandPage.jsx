@@ -1,9 +1,9 @@
 import { Button } from "antd";
 import ACLayoutWrapper from "../../../../components/layout/ACLayoutWrapper";
 import { baseAdminCompanyPath } from "../../../../constants/menu-items";
-import ACCanteenTable from "../components/ACCanteenTable";
+import ACStandTable from "../components/ACStandTable";
 
-const ACCanteenPage = () => {
+const ACStandPage = () => {
 	return (
 		<ACLayoutWrapper
 			breadcrumbItem={[
@@ -11,11 +11,16 @@ const ACCanteenPage = () => {
 					title: <a href={`${baseAdminCompanyPath}/dashboard`}>Dasbor</a>,
 				},
 				{
-					title: "Kantin",
+					title: (
+						<a href={`${baseAdminCompanyPath}/dashboard/canteen`}>Kantin</a>
+					),
+				},
+				{
+					title: "Stand",
 				},
 			]}
-			title="Kantin"
-			subTitle="Daftar kantin yang terdaftar di perusahaanmu"
+			title="Stand"
+			subTitle="Daftar stand yang terdaftar di kantin ini"
 		>
 			<div className="rounded-xl p-5 bg-white flex flex-col w-full">
 				<div className="flex justify-end items-start w-full">
@@ -24,13 +29,13 @@ const ACCanteenPage = () => {
 						shape="round"
 						className="bg-foodlink-a-1 text-white text-sm font-semibold font-poppins"
 					>
-						Tambah Kantin
+						Tambah Stand
 					</Button>
 				</div>
-				<ACCanteenTable />
+				<ACStandTable />
 			</div>
 		</ACLayoutWrapper>
 	);
 };
 
-export default ACCanteenPage;
+export default ACStandPage;

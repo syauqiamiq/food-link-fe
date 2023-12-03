@@ -9,7 +9,7 @@ const { Header } = Layout;
 
 const ACNavbar = ({ collapsed, setCollapsed }) => {
 	return (
-		<Header className="p-0 pr-2 bg-foodlink-a-2 flex w-full  justify-between items-start">
+		<Header className="p-0 pr-5 bg-foodlink-a-2 flex w-full  justify-between items-start">
 			<Button
 				type="text"
 				icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}

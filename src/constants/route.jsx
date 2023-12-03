@@ -7,8 +7,13 @@ import ListStandPage from "../pages/dashboard/pages/ListStandPage";
 import ListProductPage from "../pages/dashboard/pages/ListProductPage";
 import HistoryPage from "../pages/dashboard/pages/HistoryPage";
 import DetailHistoryTransactionPage from "../pages/dashboard/pages/DetailHistoryTransactionPage";
+import ACDashboardPage from "../pages/admin-company/dashboard/pages/ACDashboardPage";
+import ACCanteenPage from "../pages/admin-company/canteen/pages/ACCanteenPage";
+import ACUserPage from "../pages/admin-company/user/pages/ACUserPage";
+import VerifyPage from "../pages/auth/pages/VerifyPage";
+import ACStandPage from "../pages/admin-company/stand/pages/ACStandPage";
 
-const router = createBrowserRouter([
+export const pageRoute = [
 	{
 		path: "/",
 		element: <LandingPage />,
@@ -41,6 +46,25 @@ const router = createBrowserRouter([
 		path: "/dashboard/transaction-history/:id/detail",
 		element: <DetailHistoryTransactionPage />,
 	},
-]);
-
-export default router;
+	{
+		path: "/admin-company/dashboard",
+		element: <ACDashboardPage />,
+	},
+	{
+		path: "/admin-company/canteen",
+		element: <ACCanteenPage />,
+	},
+	{
+		path: "/admin-company/user",
+		element: <ACUserPage />,
+	},
+	{
+		path: "/auth/verify/:token",
+		element: <VerifyPage />,
+	},
+	{
+		path: "/admin-company/canteen/:canteenId/stand",
+		element: <ACStandPage />,
+	},
+];
+export const router = createBrowserRouter(pageRoute);

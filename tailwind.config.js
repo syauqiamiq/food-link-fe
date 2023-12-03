@@ -4,6 +4,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundColor: {
+				"foodlink-error": "#eb4034",
 				"foodlink-a-1": "#E9CA5F",
 				"foodlink-a-2": "#F7EAE3",
 				"foodlink-a-3": "#D7B19D",
@@ -21,6 +22,7 @@ export default {
 				"foodlink-a-6": "#402218",
 			},
 			borderColor: {
+				"foodlink-error": "#eb4034",
 				"foodlink-a-1": "#E9CA5F",
 				"foodlink-a-2": "#F7EAE3",
 				"foodlink-a-3": "#D7B19D",

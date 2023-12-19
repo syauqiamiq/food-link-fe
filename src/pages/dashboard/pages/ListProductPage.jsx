@@ -2,61 +2,73 @@ import { Breadcrumb, Input, Typography } from "antd";
 import LayoutWrapper from "../../../components/layout/LayoutWrapper";
 import ProductCard from "../components/ProductCard";
 import GeneralPagination from "../../../components/pagination/GeneralPagination";
+import Product1 from "../../../assets/images/product/1.png";
+import Product2 from "../../../assets/images/product/2.png";
+import Product3 from "../../../assets/images/product/3.png";
+import Product4 from "../../../assets/images/product/4.png";
+import Product5 from "../../../assets/images/product/5.png";
+import Product6 from "../../../assets/images/product/6.png";
 
 const dummyCanteenData = [
 	{
 		id: 1,
-		name: "Nasi telor ceplok",
+		name: "Nasi cumi hitam",
 		price: 7000,
 		discount: 0,
 		category: "Makanan",
 		rating: 3.8,
 		sold: 10,
+		image: Product1,
 	},
 	{
 		id: 2,
-		name: "Nasi cumi hitam",
+		name: "Bakso seger",
 		price: 18000,
 		discount: 3000,
 		rating: 5,
 		category: "Makanan",
 		sold: 300,
+		image: Product2,
 	},
 	{
 		id: 3,
-		name: "Nasi goreng jawa",
+		name: "Mie Ayam",
 		price: 10000,
 		discount: 0,
 		category: "Makanan",
 		rating: 5,
 		sold: 100,
+		image: Product3,
 	},
 	{
 		id: 4,
-		name: "Es teh jumbo",
+		name: "Es jeruk jumbo",
 		price: 5000,
 		discount: 0,
 		category: "Minuman",
 		rating: 4.1,
 		sold: 30,
+		image: Product4,
 	},
 	{
 		id: 5,
-		name: "Es jeruk manis",
+		name: "Es teh manis",
 		price: 5000,
 		discount: 0,
 		rating: 5,
 		category: "Minuman",
 		sold: 30,
+		image: Product5,
 	},
 	{
 		id: 6,
-		name: "Nasi rendang daging",
-		price: 20000,
+		name: "Extrajoss Susu",
+		price: 10000,
 		discount: 5000,
-		category: "Makanan",
+		category: "Minuman",
 		rating: 5,
 		sold: 255,
+		image: Product6,
 	},
 ];
 

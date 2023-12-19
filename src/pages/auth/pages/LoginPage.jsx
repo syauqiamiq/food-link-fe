@@ -36,6 +36,7 @@ const LoginPage = () => {
 
 	const onSubmit = (data) => {
 		console.log(data);
+		navigate("/dashboard");
 	};
 
 	return (

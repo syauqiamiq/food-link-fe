@@ -2,55 +2,31 @@ import { Breadcrumb, Input, Typography } from "antd";
 import LayoutWrapper from "../../../components/layout/LayoutWrapper";
 import CanteenCard from "../components/CanteenCard";
 import GeneralPagination from "../../../components/pagination/GeneralPagination";
+import Kantin1 from "../../../assets/images/canteen/1.png";
+import Kantin2 from "../../../assets/images/canteen/2.png";
+import Kantin3 from "../../../assets/images/canteen/3.png";
+import Kantin4 from "../../../assets/images/canteen/4.png";
 
 const dummyCanteenData = [
 	{
-		name: "Kantin Teknik",
+		name: "Kantin Teknik 1",
 		rating: 5,
+		image: Kantin1,
 	},
 	{
-		name: "Kantin Teknik",
+		name: "Kantin Teknik 2",
 		rating: 5,
+		image: Kantin2,
 	},
 	{
-		name: "Kantin Teknik",
+		name: "Kantin Teknik 3",
 		rating: 5,
+		image: Kantin3,
 	},
 	{
-		name: "Kantin Teknik",
+		name: "Kantin Teknik 4",
 		rating: 5,
-	},
-	{
-		name: "Kantin Teknik",
-		rating: 5,
-	},
-	{
-		name: "Kantin Teknik",
-		rating: 5,
-	},
-	{
-		name: "Kantin Teknik",
-		rating: 5,
-	},
-	{
-		name: "Kantin Teknik",
-		rating: 5,
-	},
-	{
-		name: "Kantin Teknik",
-		rating: 5,
-	},
-	{
-		name: "Kantin Teknik",
-		rating: 5,
-	},
-	{
-		name: "Kantin Teknik",
-		rating: 5,
-	},
-	{
-		name: "Kantin Teknik",
-		rating: 5,
+		image: Kantin4,
 	},
 ];
 

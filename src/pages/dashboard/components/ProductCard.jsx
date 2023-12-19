@@ -16,12 +16,7 @@ const ProductCard = ({ data }) => {
 	return (
 		<Card
 			className=" flex flex-col h-full"
-			cover={
-				<img
-					alt="example"
-					src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-				/>
-			}
+			cover={<img alt="example" src={data.image} />}
 		>
 			<div className="min-h-[210px] flex flex-col h-full justify-between">
 				<div>

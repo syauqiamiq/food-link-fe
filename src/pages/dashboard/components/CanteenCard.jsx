@@ -6,14 +6,7 @@ const CanteenCard = ({ data }) => {
 	const navigate = useNavigate();
 
 	return (
-		<Card
-			cover={
-				<img
-					alt="example"
-					src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-				/>
-			}
-		>
+		<Card cover={<img alt="example" src={data.image} />}>
 			<Typography className="font-poppins text-base font-semibold">
 				{data.name}
 			</Typography>

@@ -12,6 +12,7 @@ import ILPersonExample from "../../../assets/illustration/person-example.jpeg";
 import BGKantinKaryawan from "../../../assets/images/kantin-karyawan.png";
 import BGSection1 from "../../../assets/images/landing-section-image.png";
 import LayoutWrapper from "../../../components/layout/LayoutWrapper";
+import { useNavigate } from "react-router-dom";
 
 const fiturSection = [
 	{
@@ -52,6 +53,7 @@ const solusiSection = [
 ];
 
 const LandingPage = () => {
+	const navigate = useNavigate();
 	return (
 		<LayoutWrapper>
 			<div className="container mx-auto grid grid-cols-12 py-20 ">
@@ -71,6 +73,7 @@ const LandingPage = () => {
 							type="default"
 							shape="default"
 							className="w-full h-10 md:h-16 !rounded-2xl bg-foodlink-a-1 font-bold text-base font-poppins"
+							onClick={navigate("/dashboard")}
 						>
 							Selengkapnya
 						</Button>

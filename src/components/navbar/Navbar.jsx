@@ -2,7 +2,7 @@ import { HistoryOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { Badge, Button, Layout } from "antd";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import FoodLinkLogo from "../../assets/logo/foodlink-logo.png";
 import { initiateCart } from "../../store/cartSlice";
 import CartDrawer from "../cart-dialog/CartDrawer";
@@ -40,6 +40,8 @@ const Navbar = () => {
 		dispatch(initiateCart());
 	}, []);
 
+	const location = useLocation();
+
 	return (
 		<>
 			<Header className="bg-foodlink-a-2 justify-between hidden md:flex">
@@ -61,21 +63,25 @@ const Navbar = () => {
 						})}
 					</div>
 					<div className="flex gap-2 p-2 justify-center items-center">
-						<Badge
-							className="mr-4"
-							showZero={!cartStateData && true}
-							count={cartStateData?.length ?? 0}
-						>
-							<ShoppingCartOutlined
-								onClick={() => setOpenCartDrawer(true)}
-								className="text-2xl cursor-pointer"
-							/>
-						</Badge>
+						{location.pathname !== "/" && (
+							<>
+								<Badge
+									className="mr-4"
+									showZero={!cartStateData && true}
+									count={cartStateData?.length ?? 0}
+								>
+									<ShoppingCartOutlined
+										onClick={() => setOpenCartDrawer(true)}
+										className="text-2xl cursor-pointer"
+									/>
+								</Badge>
 
-						<HistoryOutlined
-							onClick={() => navigate("/dashboard/transaction-history")}
-							className="text-2xl cursor-pointer 	mr-4"
-						/>
+								<HistoryOutlined
+									onClick={() => navigate("/dashboard/transaction-history")}
+									className="text-2xl cursor-pointer 	mr-4"
+								/>
+							</>
+						)}
 
 						<Button
 							onClick={() => navigate("/auth/login")}
